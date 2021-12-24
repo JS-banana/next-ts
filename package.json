@@ -1,0 +1,43 @@
+{
+  "name": "next-ts",
+  "private": true,
+  "license": "MIT",
+  "author": {
+    "name": "JS-banana",
+    "url": "https://github.com/JS-banana/next-ts"
+  },
+  "description": "网站开发的nextjs模板",
+  "keywords": [
+    "next",
+    "react",
+    "ssr",
+    "ssg",
+    "tailwindcss"
+  ],
+  "scripts": {
+    "dev": "next",
+    "start": "next start",
+    "build": "next build",
+    "build:dist": "next build && next export -o dist",
+    "lint": "next lint",
+    "analyze": "cross-env ANALYZE=true next build"
+  },
+  "dependencies": {
+    "next": "latest",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@next/bundle-analyzer": "^12.0.7",
+    "@types/node": "^14.6.0",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.3",
+    "autoprefixer": "^10.4.0",
+    "cross-env": "^7.0.3",
+    "eslint": "8.5.0",
+    "eslint-config-next": "12.0.7",
+    "postcss": "^8.4.5",
+    "tailwindcss": "^3.0.7",
+    "typescript": "4.3.2"
+  }
+}
