@@ -13,7 +13,7 @@ next使用react技术栈，主要围绕网站建设作为底层框架使用，�
 
 ## 开发
 
-```json
+```js
 {
   "scripts": {
     "dev": "next", // 开发模式
