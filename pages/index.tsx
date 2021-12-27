@@ -1,14 +1,20 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import { useState } from 'react'
+import Header from "components/Header"
+import User from "components/User"
+import Head from "next/head"
+import githubApi from "lib/api/github"
 
-const Home: NextPage = () => {
-  const [user, setUser] = useState<IKeyValue>({
-    name: 'JS-banana',
-    desc: "I'm Front-end Developer.",
-  })
+import type { NextPage } from "next"
 
+export async function getStaticProps() {
+  const res = await githubApi.getGithubUser()
+  return {
+    props: {
+      user: res,
+    },
+  }
+}
+
+const Home: NextPage<HomeIndexProps> = ({ user }) => {
   return (
     <div>
       <Head>
@@ -17,16 +23,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="w-screen h-screen flex justify-center content-center p-6 bg-green-50">
-        <div className="mx-auto max-w-4xl max-h-40 px-6 rounded-xl shadow-lg flex items-center space-x-6 bg-white hover:bg-yellow-50">
-          <div className="flex-shrink-0">
-            <Image className="rounded-full" height={96} width={96} src="/photo.png" />
-          </div>
-          <div>
-            <div className="text-xl font-medium text-black">{user.name}</div>
-            <p className="text-gray-500">{user.desc}</p>
-          </div>
-        </div>
+      <main className="w-screen h-screen bg-green-50">
+        <Header />
+        <User user={user} />
       </main>
     </div>
   )
