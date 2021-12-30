@@ -15,7 +15,7 @@ const http = async (url: string, params: AxiosRequestConfig["params"]) => {
     return response.data
   } catch (error) {
     console.log(error)
-    return undefined
+    return {}
   }
 }
 
@@ -37,7 +37,7 @@ class GithubAPI {
 
   async getGithubUser() {
     const res = await http(GITHUB.USER, { name: this.user })
-    console.log("====", res)
+    // console.log("====", res)
     return res
   }
 }

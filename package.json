@@ -1,12 +1,12 @@
 {
-  "name": "next-ts",
+  "name": "ssscode.com",
   "private": true,
   "license": "MIT",
   "author": {
     "name": "JS-banana",
     "url": "https://github.com/JS-banana/next-ts"
   },
-  "description": "网站开发的nextjs模板",
+  "description": "小帅不太帅的个人综合门户网站",
   "keywords": [
     "next",
     "react",
