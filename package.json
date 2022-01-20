@@ -20,7 +20,9 @@
     "build": "next build",
     "build:dist": "next build && next export -o dist",
     "lint": "next lint",
-    "analyze": "cross-env ANALYZE=true next build"
+    "analyze": "cross-env ANALYZE=true next build",
+    "pm2:start": "pm2 start pm2.config.js --no-daemon",
+    "pm2:stop": "pm2 stop pm2.config.js"
   },
   "dependencies": {
     "axios": "^0.24.0",
@@ -29,6 +31,8 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@koa/multer": "^3.0.0",
+    "@koa/router": "^10.1.1",
     "@next/bundle-analyzer": "^12.0.7",
     "@types/node": "^14.6.0",
     "@types/react": "^17.0.3",
@@ -37,6 +41,7 @@
     "cross-env": "^7.0.3",
     "eslint": "8.5.0",
     "eslint-config-next": "12.0.7",
+    "koa": "^2.13.4",
     "postcss": "^8.4.5",
     "tailwindcss": "^3.0.7",
     "typescript": "4.3.2"
