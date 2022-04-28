@@ -51,7 +51,9 @@ const Home: NextPage<HomeIndexProps> = ({ user }) => {
                 target="_blank"
                 href="https://js-banana.github.io/blog"
                 rel="noreferrer"
-              ></a>
+              >
+                https://js-banana.github.io/blog
+              </a>
             </p>
             <p>
               <a
