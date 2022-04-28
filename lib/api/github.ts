@@ -37,7 +37,7 @@ class GithubAPI {
 
   async getGithubUser() {
     const res = await http(GITHUB.USER, { name: this.user })
-    // console.log("====", res)
+    console.log("====", res)
     return res
   }
 }
